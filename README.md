@@ -1,8 +1,8 @@
-## samperin-loker front end website
+# samperin-loker front end website
 
-# on-going firebase backend
+## on-going firebase backend
 
-# technology that I used:
+## technology that I used:
 
 - visual studio code
 - html and css
