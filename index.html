@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Situs Lowongan Kerja</title>
+  <meta name="description" content="lowongan pekerjaan cleaning, poles marmer, customer service, office boy, dll (2021-2022)">
+  <meta name="author" content="Seventy Five">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js" type="module"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore.js" type="module"></script>
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h4>Berikan izin lokasi di browser anda!</h4>
+    <p>demi kenyamanan kami dalam memberikan lowongan pekerjaan, kami akan memberikan lokasi yang paling terjangkau untuk anda</p>
+    <button class="button-primary" id="izinkan">Izinkan lokasi</button>
+    <button class="button" id="batalkan">Batalkan</button>
+  </div>
+
+</div>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="navbar">
+    <div class="container">
+      <div class="navlink row">
+        <div class="logo six column"><i class="fas fa-quidditch" style="margin-right: 15px;"></i>Samperin.id</div>
+        <div class="menu six column">
+         <a href="index.html"><i class="fas fa-home"></i>home</a>
+         <a href="./pages/about.html"><i class="far fa-address-card"></i>about</a>
+         <a href="pages/login.html"><i class="fas fa-sign-in-alt"></i>login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container is wrapper">
+    <div class="row">
+      <div class="hero eight columns">
+        <h1 class="title-hero">Dapatkan info lowongan terbaru disini</h1>
+        <p>Kami menyediakan jasa lowongan kerja cleaning service, office boy, poles marmer, dll. yaitu pekerjaan yg berhubungan dengan kebersihan, untuk info selengkapnya bisa klik <a href="http://www.getskeleton.com">disini</a>.</p>
+      </div>
+      <div class="four columns hero__image">
+        <img class="img__hero" src="images/download.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+
+<div class="newsletter">
+  <h1>berlangganan sekarang</h1>
+  <form action="">
+    <input type="text" placeholder="masukan email">
+    <button type="submit">berlangganan</button>
+  </form>
+</div>
+
+
+<!-- container job
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container centered">
+    <h1 class="title">Featured jobs</h1>
+  </div>
+
+  <div id="container-job" class="container is centered wrapper">
+    <div class="row" id="row">
+      <div class="four columns" id="four">
+        <div class="card">
+          <img src="https://picsum.photos/200/300" alt="">
+          <h2>Office Boy</h2>
+          <p>PT. Sembilan Lencana</p>
+          <button><a href="./pages/details.html" style="text-decoration: none; color: black;">Details >></a></button>
+        </div>
+      </div>
+      <div class="four columns" id="four2">
+        <div class="card">
+          <img src="https://picsum.photos/200/300" alt="">
+          <h2>IT Support</h2>
+          <p>PT Majapahit</p>
+          <button> <a href="./pages/details.html" style="text-decoration: none; color: black;">Details >></a></button>
+        </div>
+      </div>
+      <div class="four columns" id="four2">
+        <div class="card">
+          <img src="https://picsum.photos/200/300" alt="">
+          <h2>Customer Service</h2>
+          <p>Pt. Pertamina Indonesia</p>
+          <button> <a href="./pages/details.html" style="text-decoration: none; color: black;">Details >></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- list semua job -->
+  <div class="container centered">
+    <h1 class="title">semua jobs</h1>
+    <input type="search" placeholder="cari lowongan...">
+    <button>
+    <i class="fas fa-search" ></i>
+      submit
+    </button>
+  </div>
+
+
+  <div id="container-job" class="container is centered wrapper">
+    <div class="row" id="row">
+      <div class="four columns" id="four">
+        <div class="card">
+          <img src="https://picsum.photos/200/300" alt="">
+          <h2>Customer Service</h2>
+          <p>Pt. Unilever Indonesia</p>
+          <button> <a href="./pages/details.html" style="text-decoration: none; color: black;">Details >></a></button>
+        </div>
+      </div>
+      <div class="four columns" id="four2">
+        <div class="card">
+          <img src="https://picsum.photos/200/300" alt="">
+          <h2>Cleaning Service</h2>
+          <p>PT indo jaya sentosa</p>
+          <button> <a href="./pages/details.html" style="text-decoration: none; color: black;">Details >></a></button>
+        </div>
+      </div>
+      <div class="four columns" id="four2">
+        <div class="card">
+          <img src="https://picsum.photos/200/300" alt="">
+          <h2>Tutor Matematika</h2>
+          <p>ruangguru</p>
+          <button> <a href="./pages/details.html" style="text-decoration: none; color: black;">Details >></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="container-job" class="container is centered wrapper">
+    <div class="row" id="row">
+      <div class="four columns" id="four">
+        <div class="card">
+          <img src="https://picsum.photos/200/300" alt="">
+          <h2>Software Enginner in Test</h2>
+          <p>Zenius</p>
+          <button> <a href="./pages/details.html" style="text-decoration: none; color: black;">Details >></a></button>
+        </div>
+      </div>
+      <div class="four columns" id="four2">
+        <div class="card">
+          <img src="https://picsum.photos/200/300" alt="">
+          <h2>Data Analyst</h2>
+          <p>Company confidential</p>
+          <button> <a href="./pages/details.html" style="text-decoration: none; color: black;">Details >></a></button>
+        </div>
+      </div>
+      <div class="four columns" id="four2">
+        <div class="card">
+          <img src="https://picsum.photos/200/300" alt="">
+          <h2>Jurnalis</h2>
+          <p>Kompas TV</p>
+          <button> <a href="./pages/details.html" style="text-decoration: none; color: black;">Details >></a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="promotion container">
+    <h1 class="title centered">Buat lowongan untuk perusahaan anda</h1>
+    <div class="jumbotron row">
+      <div class="left-promotion six columns">
+        <h3>publikasikan lowongan pekerjaan anda sekarang gratis!</h3>
+        <div class="button-wrapper">
+        <button class="primary-button">Buat lowongan</button>
+        <button class="button-primary">kerja sama bisnis</button>
+        </div>
+        
+      </div>
+      <div class="right-promotion six columns">
+        <img src="https://image.freepik.com/free-vector/business-promotion-illustration_132971-66.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container row">
+      <div class="six columns social-media">
+        <h4>Follow our social media: </h4>
+        <div class="social-wrapper">
+        <span class="social">
+          <i class="fab fa-instagram"></i>
+        <p>instagram</p>   
+        </span>
+        <span class="social">
+          <i class="fab fa-facebook"></i>
+        <p>Facebook</p>   
+        </span>
+        <span class="social">
+          <i class="fab fa-telegram"></i>
+        <p>Telegram</p>
+        </span>
+      </div>
+      </div>
+
+      <div class="six columns contact">
+        <h4>Address and contact</h4>
+        <p>Email: company@email.com</p>
+        <p>Phone number: (+62) 87878787</p>
+        <p>Address: Jl. beruang kutub, jakarta selatan, 12270</p>
+      </div>
+    </div>
+
+    <div class="container copyright centered">
+      <p>copyright reserved cleaning service jobs, 2021</p>
+    </div>
+  </footer>
+    <script src="js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>
+</body>
+</html>
